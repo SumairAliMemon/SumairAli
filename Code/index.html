@@ -1,0 +1,496 @@
+<!-- Chat Gpt and Claude has been used to slove errors learing purposes and add teanstion --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+       :root {
+    --primarycolor: #252121; /* Darker black */
+    --secondarycolor: #2b2b2b; /* Lighter black */
+    --highlightcolor: #3498db; /* Blue for highlights */
+    --textcolor: #ffffff; /* White text */
+    --accentcolor: #f1c40f; /* Yellow accents */
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: var(--primarycolor); 
+    color: var(--textcolor);
+    margin-bottom: 50px;
+}
+#menu-toggle:checked ~ .nav-links {
+            display: flex;
+        }
+
+.neon-button {
+    background: linear-gradient(45deg, rgb(255, 255, 255), #0f1cd4ea);
+    border: none;
+    color: var(--textcolor);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(143, 147, 199, 0.8), 0 0 20px rgba(123, 57, 228, 0.8);
+    transition: all 0.3s ease;
+}
+
+.shadow-lg {
+            box-shadow: 0 0 10px rgba(118, 84, 240, 0.7), 0 0 20px rgba(14, 133, 230, 0.74);
+        }
+        .shadow-xl {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
+        }
+
+     .neon-button:hover {
+    background: linear-gradient(45deg, #f7bcf7, rgb(35, 116, 238));
+     }
+
+     .neon-shadow {
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(95, 12, 228, 0.5), 0 0 15px rgba(255, 255, 0, 0.5);
+        }
+        .hover\:shadow-neon:hover {
+            text-shadow: 0 0 5px rgba(0, 255, 255, 1), 0 0 10px rgb(37, 15, 235), 0 0 15px rgba(255, 255, 0, 1);
+        }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-content .animate-in {
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.header-content:hover h1,
+.header-content:hover p {
+    transition: opacity 0.3s ease-out;
+}
+
+.header-content:hover h1 {
+    opacity: 1;
+}
+
+.header-content:hover p {
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.animate-slide-in {
+    animation: slideIn 2s ease-out forwards;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="container  w-full m-auto  flex flex-row md:flex-row items-center md:justify-between gap-4 p-4 bg-black bg-opacity-80 shadow-lg fixed top-0 left-0 right-0 z-20">
+        <a href="mailto:i222709@nu.edu.pk" class="flex items-center text-xs md:text-sm lg:text-base text-white neon-shadow hover:text-blue-300" aria-label="Email Sumair">
+            <i class="fas fa-envelope mr-2"></i> Email
+        </a>
+        <div class="flex flex-wrap justify-center md:justify-end gap-4 lg:gap-9 md:gap-5">
+            <a href="#personal-profile" class="text-white neon-shadow hover:text-blue-300 hover:shadow-neon text-xs md:text-sm lg:text-base">Personal Profile</a>
+            <a href="#gallery" class="text-white neon-shadow hover:text-blue-300 hover:shadow-neon text-xs md:text-sm lg:text-base">Gallery Page</a>
+            <a href="#career-goals" class="text-white neon-shadow hover:text-blue-300 hover:shadow-neon text-xs md:text-sm lg:text-base">Career Goals</a>
+            <a href="#projects" class="text-white neon-shadow hover:text-blue-300 hover:shadow-neon text-xs md:text-sm lg:text-base">Projects</a>
+            <a href="#skills-interests" class="text-white neon-shadow hover:text-blue-300 hover:shadow-neon text-xs md:text-sm lg:text-base">Skills</a>
+            <a href="#contact" class="text-white neon-shadow hover:text-blue-300 hover:shadow-neon text-xs md:text-sm lg:text-base">Contact</a>
+        </div>
+    </nav>
+    
+    
+
+<header id="top" class="mt-20 bg-cover bg-center h-auto relative" style="background-image: url('./img/header.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="flex items-center justify-center min-h-[calc(100vh-2rem)] relative z-10 p-4 header-content">
+        <div class="text-center text-white">
+            <h1 class="text-2xl font-bold opacity-0 animate-in">Hi, I'm Sumair Ali</h1>
+            <p class="mt-2 text-base opacity-0 animate-in">A software engineer passionate about automation and eager to lead and innovate in a managerial role.</p>
+        </div>
+    </div>
+</header>
+
+
+<section id="personal-profile" class="border-blue-500 mt-20 py-12 bg-dark rounded-[20px] w-full transition-all duration-300 ease-in-out" style="background-color: #3c3c3d;">
+    <div class="container mx-auto px-3 w-4/5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            
+            <!-- Left Column (Image, Name, Role) - 30% -->
+            <div class="flex flex-col items-center md:col-span-1 space-y-4 opacity-0 animate-slide-in">
+                <img src="./img/mypic1.jpeg" alt="Profile Picture" class="rounded-full w-32 h-32 mb-4">
+                <h1 class="text-2xl font-bold text-blue-400">Sumair Ali Memon</h1>
+                <p class="text-xl text-gray-400">Software Engineer</p>
+            </div>
+
+            <!-- Right Column (Introduction, Links) - 70% -->
+            <div class="md:col-span-2 opacity-0 animate-slide-in delay-200">
+                <p class="mt-4 text-lg max-w-3xl text-center md:text-left text-gradient">
+                    I am a dedicated Bachelor's student in Software Engineering at Fast University Islamabad, passionate about pushing the boundaries of technology. With proficiency in languages like Java, C/C++, SQL, and frameworks and tools such as React, Figma, and Spring Boot, I've developed a versatile skill set for tackling diverse software challenges. My experience spans from full-stack web applications to web development, UI/UX, and software architecture, demonstrating my ability to adapt to various technological environments.
+                </p>
+
+                <!-- Links with Glowing Effect -->
+                <div class="mt-6 flex justify-center md:justify-start space-x-4 gap-3">
+                    <a href="https://www.linkedin.com/in/sumair-ali-164848260/" target="_blank" class="text-blue-400 hover:text-blue-500 hover:shadow-blue-500 shadow-lg rounded-full transition-all duration-300 ease-in-out">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/SumairAliMemon" target="_blank" class="text-gray-400 hover:text-gray-500 hover:shadow-gray-500 shadow-lg rounded-full transition-all duration-300 ease-in-out">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sumair_memon_75/" target="_blank" class="text-pink-400 hover:text-pink-500 hover:shadow-pink-500 shadow-lg rounded-full transition-all duration-300 ease-in-out">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    
+    
+
+    <section id="gallery" class="py-12 bg-dark">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold text-center mb-8 text-white">Gallery</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    
+                <figure class="relative group">
+                    <img src="./img/pic2.jpeg" alt="Description 1" class="w-full h-48 object-cover rounded-lg">
+                    <figcaption class="absolute inset-0 bg-black bg-opacity-0 text-white p-4 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 group-hover:bg-opacity-70 transition-opacity duration-300">
+                     Microsoft Certificate For C++
+                    </figcaption>
+                </figure>
+                
+                <figure class="relative group">
+                    <img src="./img/pic1.jpeg" alt="Description 2" class="w-full h-48 object-cover rounded-lg">
+                    <figcaption class="absolute inset-0 bg-black bg-opacity-0 text-white p-4 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 group-hover:bg-opacity-70 transition-opacity duration-300">
+                      Runner Up Code Craft Nascon  2024
+                    </figcaption>
+                </figure>
+    
+                <figure class="relative group">
+                    <img src="./img/pic3.png" alt="Description 3" class="w-full h-48 object-cover rounded-lg">
+                    <figcaption class="absolute inset-0 bg-black bg-opacity-0 text-white p-4 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 group-hover:bg-opacity-70 transition-opacity duration-300">
+                     Nascon 2023  Socials Team 
+                    </figcaption>
+                </figure>
+    
+            
+                <figure class="relative group">
+                    <img src="./img/pic4.jpg" alt="Description 4" class="w-full h-48 object-contain rounded-lg">
+                    <figcaption class="absolute inset-0 bg-black bg-opacity-0 text-white p-4 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 group-hover:bg-opacity-70 transition-opacity duration-300">
+                        Frontend Internship Completion Letter 
+                    </figcaption>
+                </figure>
+                
+    
+    
+                <figure class="relative group">
+                    <img src="./img/pic5.jpg" alt="Description 5" class="w-full h-48 object-contain rounded-lg">
+                    <figcaption class="absolute inset-0 bg-black bg-opacity-0 text-white p-4 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 group-hover:bg-opacity-70 transition-opacity duration-300">
+                 Forntend internship  Offer Letter 
+                    </figcaption>
+                </figure>
+    
+
+                <figure class="relative group">
+                    <img src="./img/pic6.png" alt="Description 6" class="w-full h-48 object-cover rounded-lg">
+                    <figcaption class="absolute inset-0 bg-black bg-opacity-0 text-white p-4 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 group-hover:bg-opacity-70 transition-opacity duration-300">
+                        Nasocn 2024 Design Duels Event 
+                    </figcaption>
+                </figure>
+    
+            
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="career-goals" class="py-12 bg-dark">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold text-center mb-8 text-white">Career Goals</h1>
+            
+     
+            <section id="goals" class="py-12 bg-dark">
+                <div class="container mx-auto px-6">
+                    <h1 class="text-xl font-bold text-center mb-8 text-cyan-400">Short-Term Goals</h1>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                 
+                        <div class="group border border-gray-700 rounded-lg p-4 bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-dollar-sign fa-3x text-green-400"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-white">Earn through Freelancing</h2>
+                            <p class="mt-2 text-gray-400 text-sm">Aim to earn through freelancing projects.</p>
+                        </div>
+                        
+           
+                        <div class="group border border-gray-700 rounded-lg p-4 bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-graduation-cap fa-3x text-yellow-400"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-white">Get 3+ GPA</h2>
+                            <p class="mt-2 text-gray-400 text-sm">Achieve a GPA of 3 or higher.</p>
+                        </div>
+                
+              
+                        <div class="group border border-gray-700 rounded-lg p-4 bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-user-plus fa-3x text-blue-400"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-white">Improve Myself</h2>
+                            <p class="mt-2 text-gray-400 text-sm">Focus on personal development and growth.</p>
+                        </div>
+                
+                 
+                        <div class="group border border-gray-700 rounded-lg p-4 bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-laptop-code fa-3x text-purple-400"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-white">Learn Web Development</h2>
+                            <p class="mt-2 text-gray-400 text-sm">Expand knowledge in web development technologies.</p>
+                        </div>
+                        
+                
+                        <div class="group border border-gray-700 rounded-lg p-4 bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-code fa-3x text-orange-400"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-white">Learn LeetCode</h2>
+                            <p class="mt-2 text-gray-400 text-sm">Practice coding problems on LeetCode.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+    
+            <section id="long-term-goals" class="py-12 bg-dark">
+                <div class="container mx-auto px-6">
+                    <h1 class="text-xl font-bold text-center mb-8 text-cyan-400">Long-Term Goals</h1>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Long-Term Goal 1 -->
+                        <div class="group border border-gray-700 rounded-lg p-4 bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-briefcase fa-3x text-teal-400"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-white">Get a Good Job</h2>
+                            <p class="mt-2 text-gray-400 text-sm">Secure a fulfilling and well-paying job.</p>
+                        </div>
+                        
+                 
+                        <div class="group border border-gray-700 rounded-lg p-4 bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-heart fa-3x text-red-400"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-white">Make Parents Proud</h2>
+                            <p class="mt-2 text-gray-400 text-sm">Achieve personal and professional milestones that make my parents proud.</p>
+                        </div>
+                        
+                   
+                        <div class="group border border-gray-700 rounded-lg p-4 bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-heartbeat fa-3x text-pink-400"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-white">Focus on Health</h2>
+                            <p class="mt-2 text-gray-400 text-sm">Maintain a healthy lifestyle and well-being.</p>
+                        </div>
+                        
+       
+                        <div class="group border border-gray-700 rounded-lg p-4 bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                            <div class="flex justify-center mb-4">
+                                <i class="fas fa-user-friends fa-3x text-blue-400"></i>
+                            </div>
+                            <h2 class="text-xl font-semibold text-white">Get a Loyal and Good Friend</h2>
+                            <p class="mt-2 text-gray-400 text-sm">Build meaningful and lasting friendships.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    
+
+
+    <section id="projects" class="py-12 bg-dark">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold text-center mb-8 text-white">Projects</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+                <div class="group border border-gray-700 rounded-lg p-4 shadow-lg bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                    <h2 class="text-xl font-semibold text-white">Event Management System</h2>
+                    <p class="mt-2 text-gray-400">Full-stack web app for managing events, tasks, bills, and budgets.</p>
+                    <p class="mt-2 text-gray-500">Technologies Used: Java, SQL, HTML, CSS, Spring Boot REST API</p>
+                    <a href="https://github.com/SumairAliMemon/event-management" class="text-blue-400 hover:underline">View on GitHub</a>
+
+                </div>
+                <div class="group border border-gray-700 rounded-lg p-4 shadow-lg bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                    <h2 class="text-xl font-semibold text-white">TA Management System</h2>
+                    <p class="mt-2 text-gray-400">WinForm app to manage Teaching Assistants and Lab Demonstrators.</p>
+                    <p class="mt-2 text-gray-500">Technologies Used: C#, SQL, WinForms</p>
+                    <a href="https://github.com/SumairAliMemon/ta-management" class="text-blue-400 hover:underline">View on GitHub</a>
+
+                </div>
+                <div class="group border border-gray-700 rounded-lg p-4 shadow-lg bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                    <h2 class="text-xl font-semibold text-white">Hostel Dhundu</h2>
+                    <p class="mt-2 text-gray-400">Mobile app design for booking and searching hostels.</p>
+                    <p class="mt-2 text-gray-500">Technologies Used: Figma</p>
+                    <a href="https://github.com/SumairAliMemon/hostel-dhundu" class="text-blue-400 hover:underline">View on GitHub</a>
+
+                </div>
+                <div class="group border border-gray-700 rounded-lg p-4 shadow-lg bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                    <h2 class="text-xl font-semibold text-white">Trip Management System</h2>
+                    <p class="mt-2 text-gray-400">Mobile app frontend for managing trips and payments.</p>
+                    <p class="mt-2 text-gray-500">Technologies Used: Dart, Flutter</p>
+                    <a href="https://github.com/SumairAliMemon/trip-management" class="text-blue-400 hover:underline">View on GitHub</a>
+                 
+                </div>
+                <div class="group border border-gray-700 rounded-lg p-4 shadow-lg bg-gray-800 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700">
+                    <h2 class="text-xl font-semibold text-white">Airline Management System</h2>
+                    <p class="mt-2 text-gray-400">Console-based system for managing airlines and bookings.</p>
+                    <p class="mt-2 text-gray-500">Technologies Used: C++</p>
+                    <a href="https://github.com/SumairAliMemon/airline-management" class="text-blue-400 hover:underline">View on GitHub</a>
+             
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+<!-- Skills and Interests Section --><section id="skills-interests" class="py-12 bg-dark">
+    <div class="container mx-auto px-6">
+        <h1 class="text-3xl font-bold text-center mb-8 text-white">Skills and Interests</h1>
+        
+
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold text-white mb-4">Skills</h2>
+            <div class="flex flex-col space-y-4">
+                <div class="flex items-center">
+                    <div class="w-1/3 text-white">Java</div>
+                    <div class="w-2/3 bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-1/3 text-white">C/C++</div>
+                    <div class="w-2/3 bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-1/3 text-white">SQL</div>
+                    <div class="w-2/3 bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-1/3 text-white">HTML/CSS</div>
+                    <div class="w-2/3 bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-1/3 text-white">React</div>
+                    <div class="w-2/3 bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-1/3 text-white">Figma</div>
+                    <div class="w-2/3 bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-1/3 text-white">Flutter</div>
+                    <div class="w-2/3 bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-1/3 text-white">Spring Boot</div>
+                    <div class="w-2/3 bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-1/3 text-white">Architecture</div>
+                    <div class="w-2/3 bg-gray-800 rounded-full h-4">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <h2 class="text-2xl font-semibold text-white mb-4">Interests</h2>
+            <p class="text-gray-400">As a passionate software engineer, 
+                I'm deeply interested in full-stack development, Web application  creation, UI/UX design and Software Mangerial Role.
+                 I enjoy solving  complex problems and creating efficient, user-friendly solutions. Outside of coding, 
+                 I'm enthusiastic about participating in coding competitions, exploring new technologies , Playing E game , Social Activities and learn from others . </p>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-12 bg-dark">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold text-center mb-8 text-white">Contact Us</h1>
+            <form action="#" method="post" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-600 bg-gray-700 text-white rounded-md shadow-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-600 bg-gray-700 text-white rounded-md shadow-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="subject" class="block text-sm font-medium text-gray-300">Subject</label>
+                    <input type="text" id="subject" name="subject" class="mt-1 block w-full border-gray-600 bg-gray-700 text-white rounded-md shadow-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-600 bg-gray-700 text-white rounded-md shadow-sm"></textarea>
+                </div>
+                <button type="submit" class="w-full neon-button">Send Message</button>
+            </form>
+            <div class="mt-8 text-center">
+                <p class="text-lg text-white">Email: i222709@nu.edu.pk</p>
+                <p class="text-lg text-white">Phone: 03154715478</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="bottom" class="bg-blue-900 p-4 text-white text-center">
+        <p>&copy; 2024 Sumair Ali . All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
